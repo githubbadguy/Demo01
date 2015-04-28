@@ -1,9 +1,12 @@
 #pragma once
+#include <windows.h>
 #include "IRunnable.h"
 
 class Thread 
 {
 private:
+	HANDLE _ThreadHandle;
+	DWORD _ThreadID;
 	bool _IsRunning;
 public:
 	Thread();
