@@ -1,11 +1,25 @@
 #ifndef _SINGLETON_H_FILE
 #define _SINGLETON_H_FILE
+#include "CriticalSection.h"
 
 template<typename T>
-class Singleton
+class Singleton : CriticalSection
 {
 private:
+	Singleton(){};
 	static T* _Instance;
+
+	class MyClass
+	{
+	public:
+		~MyClass()
+		{
+			if (Singleton<T>::_Instance != nullptr)
+				delete Singleton<T>::_Instance;
+
+			Singleton<T>::_Instance = nullptr;
+		}
+	};
 	static MyClass _Harmonior;
 public:
 	virtual ~Singleton(){};
@@ -13,29 +27,19 @@ public:
 	{
 		if (_Instance == nullptr)
 		{
-			_Instance = new T();
+			Lock(this);
+			if (_Instance == nullptr)
+			{
+				_Instance = new T();
+			}
 		}
 
 		return _Instance;
 	}
-
-	class MyClass
-	{
-	public:
-		~MyClass()
-		{
-			if (_Instance != nullptr)
-				delete _Instance;
-
-			_Instance = nullptr;
-		}
-	};
 };
 
 template <typename T>
 T Singleton<T>::_Instance = nullptr;
 
-template<typename T>
-Singleton<T>::MyClass Singleton<T>::_Harmonior;
 
 #endif // !_SINGLETON_H_FILE

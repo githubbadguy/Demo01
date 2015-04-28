@@ -15,24 +15,45 @@
     <Filter Include="头文件\Thread">
       <UniqueIdentifier>{7d8c4815-e48d-4a72-adf8-ef2cced0101d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Base">
+      <UniqueIdentifier>{247ff18c-6f23-4342-83a8-f2b0ad4b7920}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Base">
+      <UniqueIdentifier>{6023b8bf-1798-49a1-843f-049065498e46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Thread">
+      <UniqueIdentifier>{e9f285e4-87f7-41b3-9514-566cda74d48b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Thread.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Lock.cpp">
+      <Filter>源文件\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="CriticalSection.cpp">
+      <Filter>源文件\Base</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Singleton.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="IRunnable.h">
       <Filter>头文件\Interface</Filter>
     </ClInclude>
     <ClInclude Include="Thread.h">
-      <Filter>头文件</Filter>
+      <Filter>头文件\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>头文件\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Lock.h">
+      <Filter>头文件\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="CriticalSection.h">
+      <Filter>头文件\Base</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
