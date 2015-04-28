@@ -1,11 +1,15 @@
 #include "Thread.h"
 
 
-Thread::Thread()
+Thread::Thread() :_IsRunning(false)
 {
 }
 Thread::~Thread()
 {
+}
+inline bool Thread::IsRunning() const
+{
+	return _IsRunning;
 }
 void Thread::Start(IRunnable *runfuc)
 {

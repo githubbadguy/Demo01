@@ -3,6 +3,8 @@
 
 class Thread 
 {
+private:
+	bool _IsRunning;
 public:
 	Thread();
 	~Thread();
@@ -10,5 +12,6 @@ public:
 	void Suspend();
 	void Resume();
 	void Stop();
+	inline bool IsRunning() const;
 };
 
