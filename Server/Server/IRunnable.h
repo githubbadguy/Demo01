@@ -2,6 +2,7 @@
 #define _RUNNABLE_INTERFACE_H_FILE
 struct IRunnable
 {
-	virtual void Run(void* p = nullptr) = 0;
+public:
+	virtual void Run() = 0;
 };
 #endif
