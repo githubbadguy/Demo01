@@ -11,7 +11,7 @@ Thread::Thread() :
 Thread::~Thread()
 {
 }
-inline bool Thread::IsRunning() const
+bool Thread::IsRunning() const
 {
 	return _IsRunning;
 }
@@ -24,7 +24,7 @@ void Thread::Init(IRunnable *runfuc)
 void Thread::Start()
 {
 	_IsRunning = true;
-	Suspend();
+	Resume();
 }
 void Thread::Suspend()
 {
