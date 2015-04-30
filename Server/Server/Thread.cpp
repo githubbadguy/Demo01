@@ -11,10 +11,6 @@ Thread::Thread() :
 Thread::~Thread()
 {
 }
-bool Thread::IsRunning() const
-{
-	return _IsRunning;
-}
 void Thread::Init(IRunnable *runfuc)
 {
 	assert(_Runnable == nullptr || runfuc != nullptr);
@@ -55,9 +51,9 @@ DWORD Thread::ThreadFunc(void* p)
 	Thread* pThread = static_cast<Thread*>(p);
 	if (pThread != nullptr)
 	{
+		IRunnable* runnable = pThread->_Runnable;
 		while (pThread->_IsRunning)
 		{
-			IRunnable* runnable = pThread->_Runnable;
 			runnable->Run();
 		}
 	}

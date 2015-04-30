@@ -16,7 +16,10 @@ public:
 	void Suspend();
 	void Resume();
 	void Stop();
-	inline bool IsRunning() const;
+	inline bool IsRunning() const
+	{
+		return _IsRunning;
+	}
 protected:
 	static DWORD _stdcall ThreadFunc(void* p);
 };

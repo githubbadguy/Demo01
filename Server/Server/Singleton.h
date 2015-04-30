@@ -1,14 +1,14 @@
 #ifndef _SINGLETON_H_FILE
 #define _SINGLETON_H_FILE
 #include "CriticalSection.h"
+#include "Lock.h"
 
 template<typename T>
-class Singleton : CriticalSection
+class Singleton
 {
 private:
-	Singleton(){};
 	static T* _Instance;
-
+	static CriticalSection _CS;
 	class MyClass
 	{
 	public:
@@ -21,13 +21,15 @@ private:
 		}
 	};
 	static MyClass _Harmonior;
+protected:
+	Singleton(){};
 public:
 	virtual ~Singleton(){};
 	static T* GetInstance()
 	{
 		if (_Instance == nullptr)
 		{
-			Lock(this);
+			Lock l(&_CS);
 			if (_Instance == nullptr)
 			{
 				_Instance = new T();
@@ -39,7 +41,10 @@ public:
 };
 
 template <typename T>
-T Singleton<T>::_Instance = nullptr;
+T* Singleton<T>::_Instance = nullptr;
+
+template <typename T>
+CriticalSection Singleton<T>::_CS;
 
 
 #endif // !_SINGLETON_H_FILE
