@@ -24,6 +24,18 @@
     <Filter Include="源文件\Thread">
       <UniqueIdentifier>{e9f285e4-87f7-41b3-9514-566cda74d48b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Message">
+      <UniqueIdentifier>{6b1ed216-a951-41bc-9dad-c37fd3ca4117}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Exception">
+      <UniqueIdentifier>{e2b48103-7ed9-46f3-934c-582ba7c6fa75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Net">
+      <UniqueIdentifier>{6f957b1b-a9ab-40c3-a365-392c64015401}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Net">
+      <UniqueIdentifier>{7bbfb6ff-f6f6-46a6-9340-ff5cd2a01626}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -37,6 +49,15 @@
     </ClCompile>
     <ClCompile Include="CriticalSection.cpp">
       <Filter>源文件\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="SyncSocket.cpp">
+      <Filter>源文件\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="AsyncSocket.cpp">
+      <Filter>源文件\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseSocket.cpp">
+      <Filter>源文件\Net</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -54,6 +75,33 @@
     </ClInclude>
     <ClInclude Include="CriticalSection.h">
       <Filter>头文件\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageType.h">
+      <Filter>头文件\Message</Filter>
+    </ClInclude>
+    <ClInclude Include="IDBConnection.h">
+      <Filter>头文件\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="IDBWrite.h">
+      <Filter>头文件\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception.h">
+      <Filter>头文件\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="IDBRead.h">
+      <Filter>头文件\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="IDBResult.h">
+      <Filter>头文件\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="AsyncSocket.h">
+      <Filter>头文件\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseSocket.h">
+      <Filter>头文件\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="SyncSocket.h">
+      <Filter>头文件\Net</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

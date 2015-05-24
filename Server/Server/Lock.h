@@ -1,12 +1,13 @@
 #pragma once
-#include "CriticalSection.h"
+#include <mutex>
 
 class Lock
 {
-private:
-	CriticalSection* _cs;
+private: 
+	std::mutex* _mutex;
 public:
-	Lock(CriticalSection* cs);
+	Lock(std::mutex* m);
 	~Lock();
+	bool trylock();
 };
 

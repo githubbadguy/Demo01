@@ -1,13 +1,18 @@
 #include "Lock.h"
 
 
-Lock::Lock(CriticalSection* cs) 
-	:_cs(cs)
+Lock::Lock(std::mutex* m) 
+:_mutex(m)
 {
-	_cs->Lock();
+	_mutex->lock();
 }
 
 Lock::~Lock()
 {
-	_cs->UnLock();
+	_mutex->unlock();
+}
+
+bool Lock::trylock()
+{
+	return _mutex->try_lock();
 }

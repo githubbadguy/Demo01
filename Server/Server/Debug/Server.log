@@ -1,9 +1,12 @@
-﻿生成启动时间为 2015/4/29 星期三 16:51:21。
-     1>项目“F:\temp\Demo01\trunk\Server\Server\Server.vcxproj”在节点 2 上(Build 个目标)。
-     1>Link:
-         Server.vcxproj -> F:\temp\Demo01\trunk\Server\Debug\Server.exe
-     1>已完成生成项目“F:\temp\Demo01\trunk\Server\Server\Server.vcxproj”(Build 个目标)的操作。
+﻿生成启动时间为 2015/5/24 22:40:30。
+     1>项目“J:\network\demo01\server\Server\Server\Server.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt BaseSocket.cpp
+         BaseSocket.cpp
+     1>j:\network\demo01\server\server\server\basesocket.cpp(102): error C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1850) : 参见“inet_addr”的声明
+     1>已完成生成项目“J:\network\demo01\server\Server\Server\Server.vcxproj”(Build 个目标)的操作 - 失败。
 
-生成成功。
+生成失败。
 
-已用时间 00:00:00.04
+已用时间 00:00:00.78
