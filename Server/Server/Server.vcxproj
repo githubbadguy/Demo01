@@ -67,16 +67,25 @@
     <ClCompile Include="AsyncSocket.cpp" />
     <ClCompile Include="BaseSocket.cpp" />
     <ClCompile Include="CriticalSection.cpp" />
+    <ClCompile Include="Hero.cpp" />
     <ClCompile Include="Lock.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="NetManager.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerManager.cpp" />
+    <ClCompile Include="ProtoMsg.cpp" />
+    <ClCompile Include="RoleData.cpp" />
+    <ClCompile Include="SocketManager.cpp" />
     <ClCompile Include="SyncSocket.cpp" />
     <ClCompile Include="Thread.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AsyncSocket.h" />
     <ClInclude Include="BaseSocket.h" />
+    <ClInclude Include="CallBack.h" />
     <ClInclude Include="CriticalSection.h" />
     <ClInclude Include="Exception.h" />
+    <ClInclude Include="Hero.h" />
     <ClInclude Include="IDBConnection.h" />
     <ClInclude Include="IDBRead.h" />
     <ClInclude Include="IDBResult.h" />
@@ -84,7 +93,13 @@
     <ClInclude Include="IRunnable.h" />
     <ClInclude Include="Lock.h" />
     <ClInclude Include="MessageType.h" />
+    <ClInclude Include="NetManager.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayerManager.h" />
+    <ClInclude Include="ProtoMsg.h" />
+    <ClInclude Include="RoleData.h" />
     <ClInclude Include="Singleton.h" />
+    <ClInclude Include="SocketManager.h" />
     <ClInclude Include="SyncSocket.h" />
     <ClInclude Include="Thread.h" />
   </ItemGroup>

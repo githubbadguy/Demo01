@@ -36,6 +36,18 @@
     <Filter Include="头文件\Net">
       <UniqueIdentifier>{7bbfb6ff-f6f6-46a6-9340-ff5cd2a01626}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\PlayerData">
+      <UniqueIdentifier>{bc94907a-c73c-4b65-87ff-bb1bcda2e54f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\PlayerData">
+      <UniqueIdentifier>{a120233b-ab3b-4d18-aaec-f31f46de8b87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Manager">
+      <UniqueIdentifier>{5dbfb8bc-0a25-4ff8-8232-e70708f20cdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Manager">
+      <UniqueIdentifier>{1e81e349-c8cd-4d52-aea6-44447f228ed0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -58,6 +70,27 @@
     </ClCompile>
     <ClCompile Include="BaseSocket.cpp">
       <Filter>源文件\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="RoleData.cpp">
+      <Filter>源文件\PlayerData</Filter>
+    </ClCompile>
+    <ClCompile Include="Hero.cpp">
+      <Filter>源文件\PlayerData</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>源文件\PlayerData</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerManager.cpp">
+      <Filter>源文件\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="NetManager.cpp">
+      <Filter>源文件\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ProtoMsg.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -102,6 +135,30 @@
     </ClInclude>
     <ClInclude Include="SyncSocket.h">
       <Filter>头文件\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="RoleData.h">
+      <Filter>头文件\PlayerData</Filter>
+    </ClInclude>
+    <ClInclude Include="Hero.h">
+      <Filter>头文件\PlayerData</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>头文件\PlayerData</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerManager.h">
+      <Filter>头文件\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="NetManager.h">
+      <Filter>头文件\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="CallBack.h">
+      <Filter>头文件\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="SocketManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ProtoMsg.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

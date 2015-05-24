@@ -1,5 +1,6 @@
 #ifndef _SINGLETON_H_FILE
 #define _SINGLETON_H_FILE
+#include <mutex>
 #include "CriticalSection.h"
 #include "Lock.h"
 
@@ -8,7 +9,7 @@ class Singleton
 {
 private:
 	static T* _Instance;
-	static CriticalSection _CS;
+	static std::mutex _mutex;
 	class MyClass
 	{
 	public:
@@ -29,7 +30,7 @@ public:
 	{
 		if (_Instance == nullptr)
 		{
-			Lock l(&_CS);
+			Lock l(&_mutex);
 			if (_Instance == nullptr)
 			{
 				_Instance = new T();
@@ -44,7 +45,6 @@ template <typename T>
 T* Singleton<T>::_Instance = nullptr;
 
 template <typename T>
-CriticalSection Singleton<T>::_CS;
-
+std::mutex Singleton<T>::_mutex;
 
 #endif // !_SINGLETON_H_FILE

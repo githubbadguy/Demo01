@@ -1,5 +1,6 @@
+#define _WINSOCK_DEPRECATED_NO_WARNINGS
 #include "BaseSocket.h"
-
+using namespace std;
 
 BaseSocket::BaseSocket()
 {
@@ -97,7 +98,7 @@ bool BaseSocket::Bind(string ip, unsigned short port)
 	_port = port;
 
 	if (_ip == "")
-		addr.sin_addr.s_addr = htonl(ADDR_ANY);
+		addr.sin_addr.s_addr = htonl(INADDR_ANY);
 	else
 		addr.sin_addr.s_addr = inet_addr(_ip.c_str());
 
@@ -117,7 +118,7 @@ bool BaseSocket::Connect(string ip,unsigned short port)
 	memset(&addr, 0, sizeof(SOCKADDR_IN));
 
 	if (ip == "")
-		addr.sin_addr.s_addr = htonl(ADDR_ANY);
+		addr.sin_addr.s_addr = htonl(INADDR_ANY);
 	else
 		addr.sin_addr.s_addr = inet_addr(ip.c_str());
 
@@ -129,53 +130,11 @@ bool BaseSocket::Connect(string ip,unsigned short port)
 
 	return true;
 }
-bool BaseSocket::CheckRead()
-{
-	fd_set readset;
-	timeval timeout;
-	timeout.tv_sec = 0;
-	timeout.tv_usec = 0;
-	FD_ZERO(&readset);
-	int ret = select(FD_SETSIZE, &readset, NULL, NULL, &timeout);
-	if (ret > 0 && FD_ISSET(_socket, &readset))
-	{
-		return true;
-	}
-	return false;
-}
-bool BaseSocket::CheckWrite()
+void BaseSocket::Send(const std::string& msg)
 {
 
 }
-bool BaseSocket::Receive()
-{
-	return true;
-}
-bool BaseSocket::Send()
-{
-	return true;
-}
-void BaseSocket::ReceiveFrom()
-{
-
-}
-void BaseSocket::SendTo()
-{
-
-}
-void BaseSocket::OnReceive()
-{
-
-}
-void BaseSocket::OnSend()
-{
-
-}
-void BaseSocket::OnSendTo()
-{
-	
-}
-void BaseSocket::OnReceiveFrom()
+void BaseSocket::Send(const char* msg, unsigned int length)
 {
 
 }
