@@ -69,40 +69,38 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AsyncSocket.cpp" />
-    <ClCompile Include="BaseSocket.cpp" />
-    <ClCompile Include="Hero.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="NetManager.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="PlayerManager.cpp" />
-    <ClCompile Include="ProtoMsg.cpp" />
-    <ClCompile Include="RoleData.cpp" />
-    <ClCompile Include="SocketManager.cpp" />
-    <ClCompile Include="SyncSocket.cpp" />
-    <ClCompile Include="Thread.cpp" />
+    <ClInclude Include="async_socket.h" />
+    <ClInclude Include="base_exception.h" />
+    <ClInclude Include="base_socket.h" />
+    <ClInclude Include="callback.h" />
+    <ClInclude Include="hero.h" />
+    <ClInclude Include="idb_connection.h" />
+    <ClInclude Include="idb_read.h" />
+    <ClInclude Include="idb_result.h" />
+    <ClInclude Include="idb_write.h" />
+    <ClInclude Include="message_type.h" />
+    <ClInclude Include="net_manager.h" />
+    <ClInclude Include="player.h" />
+    <ClInclude Include="player_manager.h" />
+    <ClInclude Include="role_data.h" />
+    <ClInclude Include="singleton.h" />
+    <ClInclude Include="socket_manager.h" />
+    <ClInclude Include="sync_socket.h" />
+    <ClInclude Include="thread_pool.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AsyncSocket.h" />
-    <ClInclude Include="BaseSocket.h" />
-    <ClInclude Include="CallBack.h" />
-    <ClInclude Include="Exception.h" />
-    <ClInclude Include="Hero.h" />
-    <ClInclude Include="IDBConnection.h" />
-    <ClInclude Include="IDBRead.h" />
-    <ClInclude Include="IDBResult.h" />
-    <ClInclude Include="IDBWrite.h" />
-    <ClInclude Include="IRunnable.h" />
-    <ClInclude Include="MessageType.h" />
-    <ClInclude Include="NetManager.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="PlayerManager.h" />
-    <ClInclude Include="ProtoMsg.h" />
-    <ClInclude Include="RoleData.h" />
-    <ClInclude Include="Singleton.h" />
-    <ClInclude Include="SocketManager.h" />
-    <ClInclude Include="SyncSocket.h" />
-    <ClInclude Include="Thread.h" />
+    <ClCompile Include="async_socket.cpp" />
+    <ClCompile Include="base_socket.cpp" />
+    <ClCompile Include="hero.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="net_manager.cpp" />
+    <ClCompile Include="player.cpp" />
+    <ClCompile Include="player_manager.cpp" />
+    <ClCompile Include="proto_message.cpp" />
+    <ClCompile Include="role_data.cpp" />
+    <ClCompile Include="socket_manager.cpp" />
+    <ClCompile Include="sync_socket.cpp" />
+    <ClCompile Include="thread_pool.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

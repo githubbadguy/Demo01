@@ -1,10 +1,10 @@
 #include <iostream>
 #include <string>
 #include "IRunnable.h"
-#include "Thread.h"
+#include "thread_pool.h"
 #include "singleton.h"
-#include "IDBConnection.h"
-#include "exception.h"
+#include "idb_connection.h"
+#include "base_exception.h"
 #include <mutex>
 
 using namespace std;

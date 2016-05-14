@@ -1,3 +1,2 @@
-﻿  Thread.cpp
-f:\workspace\github\demo01\server\server\thread.cpp(25): warning C4018: “<”: 有符号/无符号不匹配
+﻿  base_socket.cpp
   Server.vcxproj -> F:\workspace\github\Demo01\Server\Debug\Server.exe
