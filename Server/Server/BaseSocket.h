@@ -5,25 +5,25 @@
 #pragma comment(lib,"wsock32.lib")
 
 
-class BaseSocket
+class base_socket
 {
 private:
 	SOCKET _socket;
-	SocketProtoType _protoType;
+	socket_proto_type _protoType;
 	std::string _ip;
 	unsigned short _port;
 	bool _inited;
 public:
-	BaseSocket();
-	virtual ~BaseSocket();
-	BaseSocket(std::string ip, unsigned short port, SocketProtoType prototype = SocketProtoType::PROTO_TCP);
-	bool Bind(std::string ip, unsigned short port);
-	bool Connect(std::string ip, unsigned short port);
+	base_socket();
+	virtual ~base_socket();
+	base_socket(std::string ip, unsigned short port, socket_proto_type prototype = socket_proto_type::proto_tcp);
+	bool bind(std::string ip, unsigned short port);
+	bool connect(std::string ip, unsigned short port);
 
-	void Send(const std::string& msg);
-	void Send(const char* msg, unsigned int length);
+	void send(const std::string& msg);
+	void send(const char* msg, unsigned int length);
 protected:
-	bool Init();
-	void Clean();
+	bool init();
+	void clean();
 };
 

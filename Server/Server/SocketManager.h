@@ -1,20 +1,20 @@
 #pragma once
 #include <map>
-#include "BaseSocket.h"
-#include "Singleton.h"
+#include "basesocket.h"
+#include "singleton.h"
 
-class SocketManager : public Singleton<SocketManager>
+class socket_manager : public singleton<socket_manager>
 {
 protected:
-	friend Singleton<SocketManager>;
-	SocketManager();
+	friend singleton<socket_manager>;
+	socket_manager();
 public:
-	~SocketManager();
-	void AddSocket(const std::string& id, BaseSocket* bs);
-	void RemoveSocket(const std::string& id);
-	BaseSocket* GetSocket(const std::string& id);
+	~socket_manager();
+	void add_socket(const std::string& id, base_socket* bs);
+	void remove_socket(const std::string& id);
+	base_socket* get_socket(const std::string& id);
 private:
-	std::map<std::string, BaseSocket*> _socketmap;
-	typedef std::map<std::string, BaseSocket*>::iterator SocketMapIterator;
+	std::map<std::string, base_socket*> _socketmap;
+	typedef std::map<std::string, base_socket*>::iterator socket_map_iterator;
 };
 

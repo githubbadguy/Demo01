@@ -1,9 +1,9 @@
 #include "AsyncSocket.h"
 
 
-AsyncSocket::AsyncSocket()
+async_socket::async_socket()
 {
 }
-AsyncSocket::~AsyncSocket()
+async_socket::~async_socket()
 {
 }

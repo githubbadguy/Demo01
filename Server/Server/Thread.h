@@ -1,26 +1,27 @@
 #pragma once
-#include <windows.h>
-#include "IRunnable.h"
+#include <vector>
+#include <mutex>
+#include "Singleton.h"
 
-class Thread 
+namespace std
 {
-private:
-	bool _IsRunning;
-	IRunnable* _Runnable;
-	HANDLE _ThreadHandle;
+	class thread;
+}
+
+class thread_pool : public singleton<thread_pool>
+{
 public:
-	Thread();
-	~Thread();
-	void Init(IRunnable *runfuc);
-	void Start();
-	void Suspend();
-	void Resume();
-	void Stop();
-	inline bool IsRunning() const
-	{
-		return _IsRunning;
-	}
-protected:
-	static DWORD _stdcall ThreadFunc(void* p);
+	~thread_pool();
+	void assign(unsigned int thread_count);
+	void fread();
+	bool has_idle_thread();
+	void push_idle(std::thread* t);
+	std::thread* pop_idle();
+private:
+	thread_pool();
+private:
+	std::vector<std::thread*> _idle_threads;
+	std::vector<std::thread*> _in_use_threads;
+	std::mutex _mutex;
 };
 

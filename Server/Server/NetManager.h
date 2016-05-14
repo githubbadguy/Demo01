@@ -2,23 +2,23 @@
 #include <vector>
 #include <string>
 #include <map>
-#include "Singleton.h"
+#include "singleton.h"
 #include "CallBack.h"
 
 
-class NetManager : public Singleton<NetManager>
+class net_manager : public singleton<net_manager>
 {
 protected:
-	friend Singleton<NetManager>;
-	NetManager();
+	friend singleton<net_manager>;
+	net_manager();
 public:
-	~NetManager();
-	void SendMsg(const std::string& playerId, const std::string& msg);
-	void SendMsg(const std::string& playerId, const char* msg, unsigned int length);
-	void RegisterMsg(const std::string& id, CallBackVoidP callback);
-	void UnRegisterMsg(const std::string& id);
+	~net_manager();
+	void send_message(const std::string& playerId, const std::string& msg);
+	void send_message(const std::string& playerId, const char* msg, unsigned int length);
+	void register_message(const std::string& id, callback_pvoid callback);
+	void unregister_message(const std::string& id);
 private:
-	std::map<std::string, CallBackVoidP> _callbackmap;
-	typedef std::map<std::string, CallBackVoidP>::iterator CallBackIterator;
+	std::map<std::string, callback_pvoid> _callbackmap;
+	typedef std::map<std::string, callback_pvoid>::iterator callback_iterator;
 };
 

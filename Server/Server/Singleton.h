@@ -1,50 +1,47 @@
 #ifndef _SINGLETON_H_FILE
 #define _SINGLETON_H_FILE
 #include <mutex>
-#include "CriticalSection.h"
-#include "Lock.h"
 
 template<typename T>
-class Singleton
+class singleton
 {
 private:
-	static T* _Instance;
+	static T* _instance;
 	static std::mutex _mutex;
-	class MyClass
+	class my_class
 	{
 	public:
-		~MyClass()
+		~my_class()
 		{
-			if (Singleton<T>::_Instance != nullptr)
-				delete Singleton<T>::_Instance;
+			if (singleton<T>::_instance != nullptr)
+				delete singleton<T>::_instance;
 
-			Singleton<T>::_Instance = nullptr;
+			singleton<T>::_instance = nullptr;
 		}
 	};
-	static MyClass _Harmonior;
+	static my_class harmonior;
 protected:
-	Singleton(){};
+	singleton(){};
 public:
-	virtual ~Singleton(){};
-	static T* GetInstance()
+	virtual ~singleton(){};
+	static T* get_instance()
 	{
-		if (_Instance == nullptr)
+		if (_instance == nullptr)
 		{
-			Lock l(&_mutex);
-			if (_Instance == nullptr)
+			std::lock_guard<std::mutex> l(_mutex);
+			if (_instance == nullptr)
 			{
-				_Instance = new T();
+				_instance = new T();
 			}
 		}
-
-		return _Instance;
+		return _instance;
 	}
 };
 
 template <typename T>
-T* Singleton<T>::_Instance = nullptr;
+T* singleton<T>::_instance = nullptr;
 
 template <typename T>
-std::mutex Singleton<T>::_mutex;
+std::mutex singleton<T>::_mutex;
 
 #endif // !_SINGLETON_H_FILE

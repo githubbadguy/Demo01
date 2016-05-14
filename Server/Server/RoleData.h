@@ -3,31 +3,31 @@
 
 using namespace std;
 
-class RoleData
+class role_data
 {
 public:
-	RoleData();
-	virtual ~RoleData();
+	role_data();
+	virtual ~role_data();
 
-	const string& getId() const;
-	void setId(const string& id);
+	const string& id() const;
+	void id(const string& value);
 
-	const string& getName() const;
-	void setName(const string& name);
+	const string& name() const;
+	void name(const string& value);
 
-	unsigned int getLevel() const;
-	void setLevel(unsigned int level);
+	unsigned int level() const;
+	void level(unsigned int value);
 
-	unsigned int getExp() const;
-	void setExp(unsigned int exp);
+	unsigned int experience() const;
+	void experience(unsigned int value);
 
-	unsigned int getUpgradeExp() const;
-	void setUpgradeExp(unsigned int upgradeexp);
+	unsigned int upgrade_experience() const;
+	void upgrade_experience(unsigned int value);
 protected:
-	string id;//全局唯一id
-	string name;//名称
-	unsigned int level;//经验值
-	unsigned int exp;//等级
-	unsigned int upgradeexp;//升级当前等级需要的经验值
+	string _id;//全局唯一id
+	string _name;//名称
+	unsigned int _level;//经验值
+	unsigned int _experience;//等级
+	unsigned int _upgrade_experience;//升级当前等级需要的经验值
 };
 

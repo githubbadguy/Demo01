@@ -1,19 +1,19 @@
 #define _WINSOCK_DEPRECATED_NO_WARNINGS
-#include "BaseSocket.h"
+#include "basesocket.h"
 using namespace std;
 
-BaseSocket::BaseSocket()
+base_socket::base_socket()
 {
 	_ip = "";
 	_port = 0;
-	_protoType = SocketProtoType::PROTO_TCP;
+	_protoType = socket_proto_type::proto_tcp;
 	_socket = INVALID_SOCKET;
 	_inited = false;
 }
-BaseSocket::~BaseSocket()
+base_socket::~base_socket()
 {
 }
-BaseSocket::BaseSocket(string ip, unsigned short port, SocketProtoType prototype) :
+base_socket::base_socket(string ip, unsigned short port, socket_proto_type prototype) :
 _ip(ip),
 _port(port),
 _protoType(prototype),
@@ -21,7 +21,7 @@ _socket(INVALID_SOCKET),
 _inited(false)
 {
 }
-bool BaseSocket::Init()
+bool base_socket::init()
 {
 	_inited = true;
 	WORD wversion = MAKEWORD(2, 2);
@@ -36,15 +36,15 @@ bool BaseSocket::Init()
 	int protocol = 0;
 	switch (_protoType)
 	{
-	case PROTO_TCP:
+	case proto_tcp:
 		type = SOCK_STREAM;
 		protocol = IPPROTO_TCP;
 		break;
-	case PROTO_UDP:
+	case proto_udp:
 		type = SOCK_DGRAM;
 		protocol = IPPROTO_UDP;
 		break;
-	case PROTO_RAW:
+	case proto_raw:
 		type = SOCK_RAW;
 		protocol = IPPROTO_RAW;
 		break;
@@ -56,19 +56,19 @@ bool BaseSocket::Init()
 	_socket = socket(AF_INET, type, protocol);
 	if (_socket == INVALID_SOCKET || _socket == SOCKET_ERROR)
 	{
-		Clean();
+		clean();
 		return false;
 	}
 
-	if (!Bind(_ip, _port))
+	if (!bind(_ip, _port))
 	{
-		Clean();
+		clean();
 		return false;
 	}
 
 	return true;
 }
-void BaseSocket::Clean()
+void base_socket::clean()
 {
 	if (_socket != INVALID_SOCKET)
 		closesocket(_socket);
@@ -78,13 +78,13 @@ void BaseSocket::Clean()
 
 	_ip = "";
 	_port = 0;
-	_protoType = SocketProtoType::PROTO_TCP;
+	_protoType = socket_proto_type::proto_tcp;
 	_socket = INVALID_SOCKET;
 	_inited = false;
 }
-bool BaseSocket::Bind(string ip, unsigned short port)
+bool base_socket::bind(string ip, unsigned short port)
 {
-	if (!_inited && !Init())
+	if (!_inited && !init())
 		return false;
 
 	if (_socket == INVALID_SOCKET)
@@ -105,13 +105,13 @@ bool BaseSocket::Bind(string ip, unsigned short port)
 	addr.sin_family = AF_INET;
 	addr.sin_port = htons(_port);
 
-	if (bind(_socket, (SOCKADDR*)&addr, len) == SOCKET_ERROR)
+	if (::bind(_socket, (SOCKADDR*)&addr, len) == SOCKET_ERROR)
 	{
 		return false;
 	}
 	return true;
 }
-bool BaseSocket::Connect(string ip,unsigned short port)
+bool base_socket::connect(string ip,unsigned short port)
 {
 	SOCKADDR_IN addr;
 	int len = sizeof(SOCKADDR);
@@ -125,16 +125,16 @@ bool BaseSocket::Connect(string ip,unsigned short port)
 	addr.sin_family = AF_INET;
 	addr.sin_port = htons(port);
 
-	if (SOCKET_ERROR == connect(_socket, (SOCKADDR*)&addr, len))
+	if (SOCKET_ERROR == ::connect(_socket, (SOCKADDR*)&addr, len))
 		return false;
 
 	return true;
 }
-void BaseSocket::Send(const std::string& msg)
+void base_socket::send(const std::string& msg)
 {
-
+	send(msg.c_str(), msg.length());
 }
-void BaseSocket::Send(const char* msg, unsigned int length)
+void base_socket::send(const char* msg, unsigned int length)
 {
 
 }

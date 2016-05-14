@@ -1,13 +1,13 @@
-enum MainMessage
+enum main_message
 {
-	NONE_MSG = 0,
-	LOGIN_MSG = 1,
-	CHAT_MSG = 2,
+	none_msg = 0,
+	login_msg = 1,
+	chat_msg = 2,
 };
 
-enum SocketProtoType
+enum socket_proto_type
 {
-	PROTO_TCP,
-	PROTO_UDP,
-	PROTO_RAW,
+	proto_tcp,
+	proto_udp,
+	proto_raw,
 };

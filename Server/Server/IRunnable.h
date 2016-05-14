@@ -1,8 +1,8 @@
 #ifndef _RUNNABLE_INTERFACE_H_FILE
 #define _RUNNABLE_INTERFACE_H_FILE
-struct IRunnable
+struct irunnable
 {
 public:
-	virtual void Run() = 0;
+	virtual void run() = 0;
 };
 #endif

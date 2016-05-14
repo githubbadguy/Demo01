@@ -56,12 +56,6 @@
     <ClCompile Include="Thread.cpp">
       <Filter>源文件\Thread</Filter>
     </ClCompile>
-    <ClCompile Include="Lock.cpp">
-      <Filter>源文件\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="CriticalSection.cpp">
-      <Filter>源文件\Base</Filter>
-    </ClCompile>
     <ClCompile Include="SyncSocket.cpp">
       <Filter>源文件\Net</Filter>
     </ClCompile>
@@ -101,12 +95,6 @@
       <Filter>头文件\Thread</Filter>
     </ClInclude>
     <ClInclude Include="Singleton.h">
-      <Filter>头文件\Base</Filter>
-    </ClInclude>
-    <ClInclude Include="Lock.h">
-      <Filter>头文件\Base</Filter>
-    </ClInclude>
-    <ClInclude Include="CriticalSection.h">
       <Filter>头文件\Base</Filter>
     </ClInclude>
     <ClInclude Include="MessageType.h">

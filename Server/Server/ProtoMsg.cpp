@@ -1,17 +1,17 @@
-#include "ProtoMsg.h"
+#include "protomsg.h"
 
 
-ProtoMsg::ProtoMsg()
+proto_message::proto_message()
 {
 }
-ProtoMsg::~ProtoMsg()
+proto_message::~proto_message()
 {
 }
-void ProtoMsg::Serialize()
+void proto_message::serialize()
 {
 	//_stream << 9;
 }
-void ProtoMsg::UnSerialize()
+void proto_message::unserialize()
 {
 	std::cout << 0;
 }

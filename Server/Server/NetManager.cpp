@@ -1,34 +1,34 @@
-#include "NetManager.h"
-#include "SocketManager.h"
+#include "netmanager.h"
+#include "socketmanager.h"
 
-NetManager::NetManager()
+net_manager::net_manager()
 {
 }
-NetManager::~NetManager()
+net_manager::~net_manager()
 {
 }
-void NetManager::SendMsg(const std::string& playerId, const std::string& msg)
+void net_manager::send_message(const std::string& playerId, const std::string& msg)
 {
-	BaseSocket* bs = SocketManager::GetInstance()->GetSocket(playerId);
+	base_socket* bs = socket_manager::get_instance()->get_socket(playerId);
 	if (bs != NULL)
-		bs->Send(msg);
+		bs->send(msg);
 }
-void NetManager::SendMsg(const std::string& playerId, const char* msg, unsigned int length)
+void net_manager::send_message(const std::string& playerId, const char* msg, unsigned int length)
 {
-	BaseSocket* bs = SocketManager::GetInstance()->GetSocket(playerId);
+	base_socket* bs = socket_manager::get_instance()->get_socket(playerId);
 	if (bs != NULL)
-		bs->Send(msg,length);
+		bs->send(msg, length);
 }
-void NetManager::RegisterMsg(const std::string& id, CallBackVoidP callback)
+void net_manager::register_message(const std::string& id, callback_pvoid callback)
 {
 	if (_callbackmap.find(id) == _callbackmap.end())
 	{
 		_callbackmap[id] = callback;
 	}
 };
-void NetManager::UnRegisterMsg(const std::string& id)
+void net_manager::unregister_message(const std::string& id)
 {
-	CallBackIterator& it = _callbackmap.find(id);
+	callback_iterator& it = _callbackmap.find(id);
 	if (it != _callbackmap.end())
 	{
 		_callbackmap.erase(it);

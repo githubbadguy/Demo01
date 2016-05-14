@@ -1,14 +1,19 @@
-#pragma once
+#ifndef _IDB_CONNECTION_H
+#define _IDB_CONNECTION_H
 #include <string>
 
-
-class IDBConnection
+class idb_connection
 {
 public:
-	virtual ~IDBConnection(){};
-	virtual bool Connect(const std::string& dbName, const std::string& userName, const std::string& password) = 0;
-	virtual bool DisConnect() = 0;
-	virtual bool Open() = 0;
-	virtual bool Close() = 0;
+	virtual ~idb_connection(){};
+	virtual bool connect(const std::string& dbName, const std::string& userName, const std::string& password) = 0;
+	virtual bool disconnect() = 0;
+	virtual bool open() = 0;
+	virtual bool close() = 0;
 };
+#endif
+
+
+
+
 

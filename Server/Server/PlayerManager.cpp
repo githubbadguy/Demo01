@@ -1,17 +1,17 @@
-#include "PlayerManager.h"
+#include "playermanager.h"
 
 
-PlayerManager::PlayerManager()
+player_manager::player_manager()
 {
 }
-PlayerManager::~PlayerManager()
+player_manager::~player_manager()
 {
 }
-map<string, Player*>& PlayerManager::getPlayerDatas()
+map<string, player*>& player_manager::get_player_datas()
 {
 	return _players;
 }
-Player* PlayerManager::getPlayerById(const string& id)
+player* player_manager::get_player_by_id(const string& id)
 {
 	if (_players.find(id) != _players.end())
 	{
@@ -19,30 +19,29 @@ Player* PlayerManager::getPlayerById(const string& id)
 	}
 	return NULL;
 }
-void PlayerManager::AddPlayer(Player* player)
+void player_manager::add_player(player* player)
 {
-	if (_players.find(player->getId()) != _players.end())
+	if (_players.find(player->id()) != _players.end())
 	{
-		_players[player->getId()] = player;
+		_players[player->id()] = player;
 	}
 }
-void PlayerManager::RemovePlayer(const string& id)
+void player_manager::remove_player(const string& id)
 {
-	mapIterator it = _players.find(id);
+	map_iterator it = _players.find(id);
 	if (it != _players.end())
 	{
-		Player* player = it->second;
+		player* player = it->second;
 		_players.erase(id);
 		delete player;
 	}
 }
-void PlayerManager::RemovePlayer(Player* player)
+void player_manager::remove_player(player* p)
 {
-	mapIterator it = _players.find(player->getId());
+	map_iterator it = _players.find(p->id());
 	if (it != _players.end())
 	{
-		Player* player = it->second;
-		_players.erase(player->getId());
-		delete player;
+		_players.erase(p->id());
+		delete p;
 	}
 }

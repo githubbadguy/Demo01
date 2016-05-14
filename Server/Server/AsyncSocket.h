@@ -1,8 +1,8 @@
 #pragma once
-class AsyncSocket
+class async_socket
 {
 public:
-	AsyncSocket();
-	~AsyncSocket();
+	async_socket();
+	~async_socket();
 };
 

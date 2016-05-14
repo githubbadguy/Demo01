@@ -1,23 +1,23 @@
 #pragma once
 #include <map>
-#include "Singleton.h"
+#include "singleton.h"
 #include "Player.h"
 using namespace std;
 
-class PlayerManager : public Singleton<PlayerManager>
+class player_manager : public singleton<player_manager>
 {
 protected:
-	friend Singleton<PlayerManager>;
-	PlayerManager();
+	friend singleton<player_manager>;
+	player_manager();
 public:
-	~PlayerManager();
-	map<string, Player*>& getPlayerDatas();
-	Player* getPlayerById(const string& id);
-	void AddPlayer(Player* player);
-	void RemovePlayer(const string& id);
-	void RemovePlayer(Player* player);
+	~player_manager();
+	map<string, player*>& get_player_datas();
+	player* get_player_by_id(const string& id);
+	void add_player(player* player);
+	void remove_player(const string& id);
+	void remove_player(player* player);
 private:
-	map<string, Player*> _players;
-	typedef map<string, Player*>::iterator mapIterator;
+	map<string, player*> _players;
+	typedef map<string, player*>::iterator map_iterator;
 };
 

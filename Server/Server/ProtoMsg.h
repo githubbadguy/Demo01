@@ -1,13 +1,13 @@
 #pragma once
 #include <iostream>
 
-class ProtoMsg
+class proto_message
 {
 public:
-	ProtoMsg();
-	virtual ~ProtoMsg();
-	void Serialize();
-	void UnSerialize();
+	proto_message();
+	virtual ~proto_message();
+	void serialize();
+	void unserialize();
 private:
 	//std::streambuf _buf;
 	//std::iostream _stream;

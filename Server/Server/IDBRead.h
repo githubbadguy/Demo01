@@ -1,9 +1,12 @@
-#pragma once
+#ifndef _IDB_READ_H
+#define _IDB_READ_H
 #include <string>
 
-class IDBRead
+class idb_read
 {
 public:
-	virtual ~IDBRead(){};
-	virtual bool Read(const std::string& sql, void** result) = 0;
+	virtual ~idb_read(){};
+	virtual bool read(const std::string& sql, void** result) = 0;
 };
+
+#endif

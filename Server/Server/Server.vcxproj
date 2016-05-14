@@ -38,15 +38,20 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>D:\Program Files (x86)\boost_1_61_0;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Program Files (x86)\boost_1_61_0\libs;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>D:\Program Files (x86)\boost_1_61_0</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\Program Files (x86)\boost_1_61_0\libs</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -66,9 +71,7 @@
   <ItemGroup>
     <ClCompile Include="AsyncSocket.cpp" />
     <ClCompile Include="BaseSocket.cpp" />
-    <ClCompile Include="CriticalSection.cpp" />
     <ClCompile Include="Hero.cpp" />
-    <ClCompile Include="Lock.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="NetManager.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -83,7 +86,6 @@
     <ClInclude Include="AsyncSocket.h" />
     <ClInclude Include="BaseSocket.h" />
     <ClInclude Include="CallBack.h" />
-    <ClInclude Include="CriticalSection.h" />
     <ClInclude Include="Exception.h" />
     <ClInclude Include="Hero.h" />
     <ClInclude Include="IDBConnection.h" />
@@ -91,7 +93,6 @@
     <ClInclude Include="IDBResult.h" />
     <ClInclude Include="IDBWrite.h" />
     <ClInclude Include="IRunnable.h" />
-    <ClInclude Include="Lock.h" />
     <ClInclude Include="MessageType.h" />
     <ClInclude Include="NetManager.h" />
     <ClInclude Include="Player.h" />

@@ -1,50 +1,50 @@
-#include "RoleData.h"
+#include "roledata.h"
 
 
-RoleData::RoleData()
+role_data::role_data()
 {
 }
 
-RoleData::~RoleData()
+role_data::~role_data()
 {
 }
-const string& RoleData::getId() const
+const string& role_data::id() const
 {
-	return id;
+	return _id;
 }
-void RoleData::setId(const string& id)
+void role_data::id(const string& value)
 {
-	this->id = id;
+	_id = value;
 }
-const string& RoleData::getName() const
+const string& role_data::name() const
 {
-	return name;
+	return _name;
 }
-void RoleData::setName(const string& name)
+void role_data::name(const string& value)
 {
-	this->name = name;
+	_name = value;
 }
-unsigned int RoleData::getLevel() const
+unsigned int role_data::level() const
 {
-	return level;
+	return _level;
 }
-void RoleData::setLevel(unsigned int level)
+void role_data::level(unsigned int value)
 {
-	this->level = level;
+	_level = value;
 }
-unsigned int RoleData::getExp() const
+unsigned int role_data::experience() const
 {
-	return exp;
+	return _experience;
 }
-void RoleData::setExp(unsigned int exp)
+void role_data::experience(unsigned int value)
 {
-	this->exp = exp;
+	_experience = value;
 }
-unsigned int RoleData::getUpgradeExp() const
+unsigned int role_data::upgrade_experience() const
 {
-	return upgradeexp;
+	return _upgrade_experience;
 }
-void RoleData::setUpgradeExp(unsigned int upgradeexp)
+void role_data::upgrade_experience(unsigned int value)
 {
-	this->upgradeexp = upgradeexp;
+	_upgrade_experience = value;
 }

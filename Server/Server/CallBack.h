@@ -1,3 +1,12 @@
-#pragma once
+#ifndef _CALLBACK_H
+#define _CALLBACK_H
 
-typedef void(*CallBackVoidP)(void* p);
+typedef void(*callback_pvoid)(void* p);
+
+
+
+
+
+
+#endif // _CALLBACK_H
+

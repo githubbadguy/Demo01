@@ -1,10 +1,10 @@
 #pragma once
-#include "RoleData.h"
-class Player :
-	public RoleData
+#include "roledata.h"
+class player :
+	public role_data
 {
 public:
-	Player();
-	~Player();
+	player();
+	~player();
 };
 

@@ -1,32 +1,32 @@
-#include "SocketManager.h"
+#include "socketmanager.h"
 
 
-SocketManager::SocketManager()
+socket_manager::socket_manager()
 {
 }
-SocketManager::~SocketManager()
+socket_manager::~socket_manager()
 {
 }
-void SocketManager::AddSocket(const std::string& id, BaseSocket* bs)
+void socket_manager::add_socket(const std::string& id, base_socket* bs)
 {
 	if (_socketmap.find(id) == _socketmap.end())
 	{
 		_socketmap[id] = bs;
 	}
 };
-void SocketManager::RemoveSocket(const std::string& id)
+void socket_manager::remove_socket(const std::string& id)
 {
-	SocketMapIterator& it = _socketmap.find(id);
+	socket_map_iterator& it = _socketmap.find(id);
 	if (it != _socketmap.end())
 	{
-		BaseSocket* p = it->second;
+		base_socket* p = it->second;
 		_socketmap.erase(it);
 		delete p;
 	}
 }
-BaseSocket* SocketManager::GetSocket(const std::string& id)
+base_socket* socket_manager::get_socket(const std::string& id)
 {
-	SocketMapIterator& it = _socketmap.find(id);
+	socket_map_iterator& it = _socketmap.find(id);
 	if (it != _socketmap.end())
 	{
 		return it->second;

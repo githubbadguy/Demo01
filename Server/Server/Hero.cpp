@@ -1,11 +1,11 @@
-#include "Hero.h"
+#include "hero.h"
 
 
-Hero::Hero()
+hero::hero()
 {
 }
 
 
-Hero::~Hero()
+hero::~hero()
 {
 }

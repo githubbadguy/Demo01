@@ -1,16 +1,16 @@
 #pragma once
 #include <string>
 
-class Exception
+class base_exception
 {
 public:
-	Exception(const std::string& message){ this->_message = message; }
-	virtual ~Exception(){};
+	base_exception(const std::string& message){ this->_message = message; }
+	virtual ~base_exception(){};
 
-	virtual const std::string& What() const { return _message; }
-	virtual void Error(const std::string& message){ this->_message = message; }
-	virtual void Append(const std::string& message){ this->_message.append(message); }
-	virtual const char* GetChar() const{ return this->_message.c_str(); }
+	virtual const std::string& what() const { return _message; }
+	virtual void error(const std::string& message){ this->_message = message; }
+	virtual void append(const std::string& message){ this->_message.append(message); }
+	virtual const char* get_char() const{ return this->_message.c_str(); }
 private:
 	std::string _message;
 };
