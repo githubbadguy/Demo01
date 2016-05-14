@@ -2,153 +2,158 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="源文件">
-      <UniqueIdentifier>{e55a0b73-44b5-4a32-96da-51cf579b8449}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\base">
-      <UniqueIdentifier>{9b49088a-d643-4ec2-a8a4-113a97fd4dfc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\exception">
-      <UniqueIdentifier>{736aabc0-f71e-4195-99c6-947e127f96cd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\interface">
-      <UniqueIdentifier>{61944be1-21bd-4813-a897-7dc97a6fa262}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\message">
-      <UniqueIdentifier>{ef6c5eec-2dd4-46d5-80cf-a749ae615e30}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\net">
-      <UniqueIdentifier>{a956e0fb-04b5-4f95-a5f9-93d7d7bed417}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\playerdata">
-      <UniqueIdentifier>{2056fbdd-2fd2-4337-97b1-920cd13a3b7c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\thread">
-      <UniqueIdentifier>{af8ee53b-8b99-4298-8168-0342321b0fe3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\manager">
-      <UniqueIdentifier>{3ba560af-2772-4b25-8cdb-8c67d4b77554}</UniqueIdentifier>
+      <UniqueIdentifier>{cf19c837-7bd9-4b74-a3c4-0791827da0e9}</UniqueIdentifier>
     </Filter>
     <Filter Include="头文件">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="头文件\interface">
-      <UniqueIdentifier>{25b77615-0b60-4230-a4f6-fa580eba207d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="头文件\thread">
-      <UniqueIdentifier>{7d8c4815-e48d-4a72-adf8-ef2cced0101d}</UniqueIdentifier>
+      <UniqueIdentifier>{5ab1f5ca-e242-4359-8ad0-3b77e7910a41}</UniqueIdentifier>
     </Filter>
     <Filter Include="头文件\base">
-      <UniqueIdentifier>{247ff18c-6f23-4342-83a8-f2b0ad4b7920}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="头文件\message">
-      <UniqueIdentifier>{6b1ed216-a951-41bc-9dad-c37fd3ca4117}</UniqueIdentifier>
+      <UniqueIdentifier>{a909a78b-7ad9-43cf-9c6e-ec48fdd776ba}</UniqueIdentifier>
     </Filter>
     <Filter Include="头文件\exception">
-      <UniqueIdentifier>{e2b48103-7ed9-46f3-934c-582ba7c6fa75}</UniqueIdentifier>
+      <UniqueIdentifier>{bc1053ab-14af-43c6-8008-8f0bd1519c7c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\net">
-      <UniqueIdentifier>{7bbfb6ff-f6f6-46a6-9340-ff5cd2a01626}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="头文件\playerdata">
-      <UniqueIdentifier>{bc94907a-c73c-4b65-87ff-bb1bcda2e54f}</UniqueIdentifier>
+    <Filter Include="头文件\interface">
+      <UniqueIdentifier>{db364775-e231-4ec2-b496-637c6782f7f8}</UniqueIdentifier>
     </Filter>
     <Filter Include="头文件\manager">
-      <UniqueIdentifier>{5dbfb8bc-0a25-4ff8-8232-e70708f20cdb}</UniqueIdentifier>
+      <UniqueIdentifier>{770cdd59-7732-422b-b6e3-bc10644476af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\message">
+      <UniqueIdentifier>{44ad8fe3-5e24-40ef-aaa2-1814633e6ad4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\net">
+      <UniqueIdentifier>{9010be10-859d-45fe-98bd-ae81c1dc700d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\thread">
+      <UniqueIdentifier>{b160f1d0-993a-4656-ba3c-ba5fbd75b241}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\playerdata">
+      <UniqueIdentifier>{aea117be-2ad5-4763-a222-20f1040ee8a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\base">
+      <UniqueIdentifier>{c3e4f555-d0fc-415a-bb45-7889028753e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\exception">
+      <UniqueIdentifier>{3a7c9fb1-c107-4b7d-99dd-17e3d673bef8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\interface">
+      <UniqueIdentifier>{e0b0c7f0-0821-4853-b001-23e28c671005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\manager">
+      <UniqueIdentifier>{4f490f13-17b9-451b-b7e6-699aca19efa4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\message">
+      <UniqueIdentifier>{28355b64-27e0-46cb-a5d6-866b09f9b813}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\net">
+      <UniqueIdentifier>{0ca9efa0-88ee-4208-b5a7-6d06f6af87a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\thread">
+      <UniqueIdentifier>{4e24926e-9ee4-43f1-999a-2a0dd9a1692e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\playerdata">
+      <UniqueIdentifier>{4f755c5a-8b08-402f-beaf-d2ca16f0cbfe}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="base_exception.h">
-      <Filter>头文件\exception</Filter>
-    </ClInclude>
-    <ClInclude Include="singleton.h">
+    <ClInclude Include="src\base\singleton.h">
       <Filter>头文件\base</Filter>
     </ClInclude>
-    <ClInclude Include="idb_connection.h">
+    <ClInclude Include="src\exception\base_exception.h">
+      <Filter>头文件\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="src\interface\callback.h">
       <Filter>头文件\interface</Filter>
     </ClInclude>
-    <ClInclude Include="idb_read.h">
+    <ClInclude Include="src\interface\idb_connection.h">
       <Filter>头文件\interface</Filter>
     </ClInclude>
-    <ClInclude Include="idb_result.h">
+    <ClInclude Include="src\interface\idb_read.h">
       <Filter>头文件\interface</Filter>
     </ClInclude>
-    <ClInclude Include="idb_write.h">
+    <ClInclude Include="src\interface\idb_result.h">
       <Filter>头文件\interface</Filter>
     </ClInclude>
-    <ClInclude Include="callback.h">
+    <ClInclude Include="src\interface\idb_write.h">
       <Filter>头文件\interface</Filter>
     </ClInclude>
-    <ClInclude Include="net_manager.h">
+    <ClInclude Include="src\interface\irunnable.h">
+      <Filter>头文件\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="src\manager\net_manager.h">
       <Filter>头文件\manager</Filter>
     </ClInclude>
-    <ClInclude Include="player_manager.h">
+    <ClInclude Include="src\manager\player_manager.h">
       <Filter>头文件\manager</Filter>
     </ClInclude>
-    <ClInclude Include="message_type.h">
+    <ClInclude Include="src\manager\socket_manager.h">
+      <Filter>头文件\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\message\message_type.h">
       <Filter>头文件\message</Filter>
     </ClInclude>
-    <ClInclude Include="async_socket.h">
+    <ClInclude Include="src\message\proto_message.h">
+      <Filter>头文件\message</Filter>
+    </ClInclude>
+    <ClInclude Include="src\net\async_socket.h">
       <Filter>头文件\net</Filter>
     </ClInclude>
-    <ClInclude Include="base_socket.h">
+    <ClInclude Include="src\net\base_socket.h">
       <Filter>头文件\net</Filter>
     </ClInclude>
-    <ClInclude Include="sync_socket.h">
+    <ClInclude Include="src\net\sync_socket.h">
       <Filter>头文件\net</Filter>
     </ClInclude>
-    <ClInclude Include="role_data.h">
+    <ClInclude Include="src\playerdata\hero.h">
       <Filter>头文件\playerdata</Filter>
     </ClInclude>
-    <ClInclude Include="hero.h">
+    <ClInclude Include="src\playerdata\player.h">
       <Filter>头文件\playerdata</Filter>
     </ClInclude>
-    <ClInclude Include="player.h">
+    <ClInclude Include="src\playerdata\role_data.h">
       <Filter>头文件\playerdata</Filter>
     </ClInclude>
-    <ClInclude Include="thread_pool.h">
+    <ClInclude Include="src\thread\thread_pool.h">
       <Filter>头文件\thread</Filter>
-    </ClInclude>
-    <ClInclude Include="socket_manager.h">
-      <Filter>头文件\manager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="player_manager.cpp">
+    <ClCompile Include="src\manager\net_manager.cpp">
       <Filter>源文件\manager</Filter>
     </ClCompile>
-    <ClCompile Include="socket_manager.cpp">
+    <ClCompile Include="src\manager\player_manager.cpp">
       <Filter>源文件\manager</Filter>
     </ClCompile>
-    <ClCompile Include="proto_message.cpp">
+    <ClCompile Include="src\manager\socket_manager.cpp">
+      <Filter>源文件\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\message\proto_message.cpp">
       <Filter>源文件\message</Filter>
     </ClCompile>
-    <ClCompile Include="net_manager.cpp">
-      <Filter>源文件\manager</Filter>
-    </ClCompile>
-    <ClCompile Include="async_socket.cpp">
+    <ClCompile Include="src\net\async_socket.cpp">
       <Filter>源文件\net</Filter>
     </ClCompile>
-    <ClCompile Include="base_socket.cpp">
+    <ClCompile Include="src\net\base_socket.cpp">
       <Filter>源文件\net</Filter>
     </ClCompile>
-    <ClCompile Include="sync_socket.cpp">
+    <ClCompile Include="src\net\sync_socket.cpp">
       <Filter>源文件\net</Filter>
     </ClCompile>
-    <ClCompile Include="hero.cpp">
-      <Filter>源文件\playerdata</Filter>
-    </ClCompile>
-    <ClCompile Include="role_data.cpp">
-      <Filter>源文件\playerdata</Filter>
-    </ClCompile>
-    <ClCompile Include="player.cpp">
-      <Filter>源文件\playerdata</Filter>
-    </ClCompile>
-    <ClCompile Include="thread_pool.cpp">
+    <ClCompile Include="src\thread\thread_pool.cpp">
       <Filter>源文件\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="src\playerdata\hero.cpp">
+      <Filter>源文件\playerdata</Filter>
+    </ClCompile>
+    <ClCompile Include="src\playerdata\player.cpp">
+      <Filter>源文件\playerdata</Filter>
+    </ClCompile>
+    <ClCompile Include="src\playerdata\role_data.cpp">
+      <Filter>源文件\playerdata</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

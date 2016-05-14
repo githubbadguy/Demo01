@@ -10,6 +10,42 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\base\singleton.h" />
+    <ClInclude Include="src\exception\base_exception.h" />
+    <ClInclude Include="src\interface\callback.h" />
+    <ClInclude Include="src\interface\idb_connection.h" />
+    <ClInclude Include="src\interface\idb_read.h" />
+    <ClInclude Include="src\interface\idb_result.h" />
+    <ClInclude Include="src\interface\idb_write.h" />
+    <ClInclude Include="src\interface\irunnable.h" />
+    <ClInclude Include="src\manager\net_manager.h" />
+    <ClInclude Include="src\manager\player_manager.h" />
+    <ClInclude Include="src\manager\socket_manager.h" />
+    <ClInclude Include="src\message\message_type.h" />
+    <ClInclude Include="src\message\proto_message.h" />
+    <ClInclude Include="src\net\async_socket.h" />
+    <ClInclude Include="src\net\base_socket.h" />
+    <ClInclude Include="src\net\sync_socket.h" />
+    <ClInclude Include="src\playerdata\hero.h" />
+    <ClInclude Include="src\playerdata\player.h" />
+    <ClInclude Include="src\playerdata\role_data.h" />
+    <ClInclude Include="src\thread\thread_pool.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\manager\net_manager.cpp" />
+    <ClCompile Include="src\manager\player_manager.cpp" />
+    <ClCompile Include="src\manager\socket_manager.cpp" />
+    <ClCompile Include="src\message\proto_message.cpp" />
+    <ClCompile Include="src\net\async_socket.cpp" />
+    <ClCompile Include="src\net\base_socket.cpp" />
+    <ClCompile Include="src\net\sync_socket.cpp" />
+    <ClCompile Include="src\playerdata\hero.cpp" />
+    <ClCompile Include="src\playerdata\player.cpp" />
+    <ClCompile Include="src\playerdata\role_data.cpp" />
+    <ClCompile Include="src\thread\thread_pool.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{0304B2DB-A844-4C08-A643-35530C178A0F}</ProjectGuid>
     <RootNamespace>Server</RootNamespace>
@@ -68,40 +104,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="async_socket.h" />
-    <ClInclude Include="base_exception.h" />
-    <ClInclude Include="base_socket.h" />
-    <ClInclude Include="callback.h" />
-    <ClInclude Include="hero.h" />
-    <ClInclude Include="idb_connection.h" />
-    <ClInclude Include="idb_read.h" />
-    <ClInclude Include="idb_result.h" />
-    <ClInclude Include="idb_write.h" />
-    <ClInclude Include="message_type.h" />
-    <ClInclude Include="net_manager.h" />
-    <ClInclude Include="player.h" />
-    <ClInclude Include="player_manager.h" />
-    <ClInclude Include="role_data.h" />
-    <ClInclude Include="singleton.h" />
-    <ClInclude Include="socket_manager.h" />
-    <ClInclude Include="sync_socket.h" />
-    <ClInclude Include="thread_pool.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="async_socket.cpp" />
-    <ClCompile Include="base_socket.cpp" />
-    <ClCompile Include="hero.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="net_manager.cpp" />
-    <ClCompile Include="player.cpp" />
-    <ClCompile Include="player_manager.cpp" />
-    <ClCompile Include="proto_message.cpp" />
-    <ClCompile Include="role_data.cpp" />
-    <ClCompile Include="socket_manager.cpp" />
-    <ClCompile Include="sync_socket.cpp" />
-    <ClCompile Include="thread_pool.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
